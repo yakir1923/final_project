@@ -1,5 +1,7 @@
 package com.example.final_project.POCO;
 
+import java.util.Objects;
+
 public class Countries implements POCO {
     public int id;
     public String Name;
@@ -19,5 +21,11 @@ public class Countries implements POCO {
                 "id=" + id +
                 ", Name='" + Name + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Countries countries= (Countries) obj;
+        return (this.id==countries.id && this.Name.equals(countries.Name));
     }
 }

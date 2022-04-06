@@ -25,4 +25,13 @@ public class AirlineCompanies implements POCO{
                 ", UserId=" + UserId +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+       AirlineCompanies a= (AirlineCompanies) obj;
+       return (this.id==a.id
+       &&this.name.equals(a.name)
+       &&this.CountryId==a.CountryId
+       &&this.UserId==a.UserId);
+    }
 }

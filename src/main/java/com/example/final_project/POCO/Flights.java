@@ -36,4 +36,17 @@ public class Flights implements POCO {
                 ", remainingTickets=" + remainingTickets +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Flights other=(Flights) obj;
+
+        return (this.id==other.id
+                &&this.airlineCompanyId==other.airlineCompanyId
+                &&this.originCountryId==other.originCountryId
+                &&this.destinationCountryId==other.destinationCountryId
+                &&this.departureTime.toString().equals(other.departureTime.toString())
+                &&this.landingTime.toString().equals(other.landingTime.toString())
+                &&this.remainingTickets==other.remainingTickets);
+    }
 }

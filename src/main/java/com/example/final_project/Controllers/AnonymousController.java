@@ -39,7 +39,7 @@ public class AnonymousController {
     }
 
 
-    @RequestMapping("/get_airline_by_id/{id}")
+    @GetMapping("/get_airline_by_id/{id}")
     public AirlineCompanies get_airline_by_id(@PathVariable int id){
         return anonymousFacade.get_airline_by_id(id);
     }
