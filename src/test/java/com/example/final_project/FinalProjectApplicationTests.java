@@ -1,25 +1,22 @@
 package com.example.final_project;
 
-import com.example.final_project.Facade.AdministratorFacade;
-import com.example.final_project.Facade.AirlineFacade;
-import com.example.final_project.Facade.AnonymousFacade;
-import com.example.final_project.Facade.CustomerFacade;
+import com.example.final_project.facade.AdministratorFacade;
+import com.example.final_project.facade.AirlineFacade;
+import com.example.final_project.facade.AnonymousFacade;
+import com.example.final_project.facade.CustomerFacade;
 import com.example.final_project.POCO.AirlineCompanies;
 import com.example.final_project.POCO.Countries;
-import com.example.final_project.POCO.Customers;
 import com.example.final_project.POCO.Flights;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.security.core.parameters.P;
 
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.sql.Timestamp;
 
 @SpringBootTest
 class FinalProjectApplicationTests {

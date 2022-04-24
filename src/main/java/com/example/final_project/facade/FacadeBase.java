@@ -1,4 +1,4 @@
-package com.example.final_project.Facade;
+package com.example.final_project.facade;
 
 import com.example.final_project.DAO.AirlineCompanyConnection;
 import com.example.final_project.DAO.CountryConnection;

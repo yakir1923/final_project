@@ -9,8 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UsersConnection implements DAO<Users>{
-    public static List<Users> usersList=new ArrayList<>();
-    public Users user;
+
     PGAConnection myConnection;
 
     public UsersConnection() {
@@ -23,11 +22,11 @@ public class UsersConnection implements DAO<Users>{
             Statement stm=myConnection.connection.createStatement();
             var r=stm.executeQuery("SELECT * FROM \"Users\" WHERE \"Id\"="+id+"");
             r.next();
-            user=new Users();
+            Users user=new Users();
             user.userName=r.getString("UserName");
             user.password=r.getString("Password");
             user.email=r.getString("Email");
-            user.UserRole=r.getInt("User_Role");
+            user.userRole =r.getInt("User_Role");
             user.id=r.getInt("Id");
             return user;
         }catch (Exception e){
@@ -38,16 +37,17 @@ public class UsersConnection implements DAO<Users>{
 
     @Override
     public List<Users> getAll() {
+        List<Users>usersList=new ArrayList<>();
         try {
             myConnection= PGAConnection.getInstance();
             Statement stm=myConnection.connection.createStatement();
             var r=stm.executeQuery("SELECT * FROM \"Users\"");
           while( r.next()) {
-              user = new Users();
+              Users user = new Users();
               user.userName = r.getString("UserName");
               user.password = r.getString("Password");
               user.email = r.getString("Email");
-              user.UserRole = r.getInt("User_Role");
+              user.userRole = r.getInt("User_Role");
               user.id = r.getInt("Id");
               usersList.add(user);
           }
@@ -62,14 +62,13 @@ public class UsersConnection implements DAO<Users>{
         try {
             myConnection= PGAConnection.getInstance();
             Statement stm=myConnection.connection.createStatement();
-            var r=stm.executeQuery("INSERT INTO public.\"Users\"(\n" +
-                    "\t \"UserName\", \"Password\", \"Email\", \"User_Role\")\n" +
-                    "\tVALUES ('" +user.userName+
+            var r=stm.executeUpdate("INSERT INTO \"Users\"(" +
+                    " \"UserName\", \"Password\", \"Email\", \"User_Role\")" +
+                    "VALUES ('" +user.userName+
                     "', '" +user.password+
                     "', '" +user.email+
-                    "', '" +user.UserRole+
-                    "');");
-            usersList.add(user);
+                    "'," + user.userRole +
+                    ");");
             }catch (Exception e){
             System.out.println(e.getMessage());
         }
@@ -98,7 +97,7 @@ public class UsersConnection implements DAO<Users>{
                     "', \"UserName\"='" +user.userName+
                     "', \"Password\"='" +user.password+
                     "', \"Email\"='" +user.email+
-                    "', \"User_Role\"=' " +user.UserRole+
+                    "', \"User_Role\"=' " +user.userRole +
                     "'\tWHERE \"Id\"="+user.id+";");
         }catch (Exception e){
             System.out.println(e.getMessage());
@@ -111,11 +110,11 @@ public class UsersConnection implements DAO<Users>{
             Statement stm = myConnection.connection.createStatement();
             var r=stm.executeQuery("SELECT * FROM get_user_by_username('"+userName+"')");
             r.next();
-            user=new Users();
+            Users user=new Users();
             user.userName=r.getString("UserName");
             user.password=r.getString("Password");
             user.email=r.getString("Email");
-            user.UserRole=r.getInt("User_Role");
+            user.userRole =r.getInt("User_Role");
             user.id=r.getInt("Id");
             return user;
         }catch (Exception e){

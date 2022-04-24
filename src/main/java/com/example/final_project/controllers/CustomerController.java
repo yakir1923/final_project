@@ -1,7 +1,7 @@
-package com.example.final_project.Controllers;
+package com.example.final_project.controllers;
 
-import com.example.final_project.Facade.CustomerFacade;
-import com.example.final_project.Facade.FacadeBase;
+import com.example.final_project.facade.CustomerFacade;
+import com.example.final_project.facade.FacadeBase;
 import com.example.final_project.POCO.*;
 import org.springframework.web.bind.annotation.*;
 

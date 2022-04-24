@@ -1,10 +1,8 @@
-package com.example.final_project.Controllers;
+package com.example.final_project.controllers;
 
 
-import com.example.final_project.Facade.AdministratorFacade;
-import com.example.final_project.Facade.FacadeBase;
+import com.example.final_project.facade.AdministratorFacade;
 import com.example.final_project.POCO.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.Timestamp;

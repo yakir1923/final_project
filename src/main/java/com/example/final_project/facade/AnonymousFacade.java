@@ -1,4 +1,4 @@
-package com.example.final_project.Facade;
+package com.example.final_project.facade;
 
 
 import com.example.final_project.DAO.CustomerConnection;
@@ -19,7 +19,7 @@ public class AnonymousFacade extends FacadeBase{
         user =usersConnection.get_user_by_username_and_password(userName,password);
         loginToken.setId(user.id);
         loginToken.setName(user.userName);
-        loginToken.setUserRole(user.UserRole);
+        loginToken.setUserRole(user.userRole);
          if (user.password.equals(password) && user.userName.equals(userName)){
              switch (loginToken.getUserRole()) {
                  case 1 -> facade = new CustomerFacade();

@@ -1,23 +1,22 @@
-package com.example.final_project.Controllers;
+package com.example.final_project.controllers;
 
 
-import com.example.final_project.Facade.AnonymousFacade;
-import com.example.final_project.Facade.FacadeBase;
+import com.example.final_project.facade.AnonymousFacade;
+import com.example.final_project.facade.FacadeBase;
 import com.example.final_project.POCO.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.Entity;
 import java.sql.Timestamp;
 import java.util.List;
 
 @RestController
 public class AnonymousController {
 
+     AnonymousFacade anonymousFacade=new AnonymousFacade();
 
-    AnonymousFacade anonymousFacade=new AnonymousFacade();
 
-
-    @GetMapping("/get_all_flights")
+    @GetMapping("/")
     public List<Flights> get_all_flights(){
         return anonymousFacade.get_all_flights();
     }
@@ -60,8 +59,10 @@ public class AnonymousController {
     }
 
     @PostMapping("/create_new_user")
-    public void create_new_user(@RequestBody Users user){
+    public boolean create_new_user(@RequestBody Users user){
+        System.out.println(user);
         anonymousFacade.create_new_user(user);
+        return true;
     }
 
     @RequestMapping("/_login/{userName}/{password}")

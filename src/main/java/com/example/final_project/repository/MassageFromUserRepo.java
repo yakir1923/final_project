@@ -1,4 +1,4 @@
-package com.example.final_project.Repository;
+package com.example.final_project.repository;
 
 import com.example.final_project.DTO.MassageFromUser;
 import org.springframework.data.repository.CrudRepository;

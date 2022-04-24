@@ -1,14 +1,9 @@
-package com.example.final_project.Service;
-import aj.org.objectweb.asm.ModuleVisitor;
+package com.example.final_project.service;
 
-import antlr.collections.impl.LList;
 import com.example.final_project.DTO.MassageFromUser;
-import com.example.final_project.Repository.MassageFromUserRepo;
+import com.example.final_project.repository.MassageFromUserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import java.util.ArrayList;
 import java.util.List;
