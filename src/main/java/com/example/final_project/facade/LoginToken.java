@@ -3,7 +3,7 @@ package com.example.final_project.facade;
 
 public class LoginToken {
    private int id;
-   private   String name;
+   private String name;
    private int userRole;
 
     public LoginToken(int id, String name, int userRole) {

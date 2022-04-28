@@ -9,7 +9,7 @@ import java.sql.Timestamp;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Customer")
+@RequestMapping("/customer")
 public class CustomerController {
 
     CustomerFacade customerFacade=new CustomerFacade();

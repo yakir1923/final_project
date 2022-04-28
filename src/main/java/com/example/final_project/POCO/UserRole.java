@@ -1,6 +1,11 @@
 package com.example.final_project.POCO;
 
+
+import javax.persistence.*;
+
+
 public class UserRole implements POCO{
+
     public int id;
     public String RoleName;
 

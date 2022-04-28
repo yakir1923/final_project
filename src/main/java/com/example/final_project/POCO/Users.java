@@ -4,9 +4,15 @@ package com.example.final_project.POCO;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.*;
+
 @Getter
 @Setter
+@Entity
 public class Users implements POCO {
+
+    @Id
+    @GeneratedValue(strategy =GenerationType.AUTO)
     public int id;
     public String userName;
     public String password;
