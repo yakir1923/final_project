@@ -6,10 +6,12 @@ import com.example.final_project.DAO.CustomerConnection;
 import com.example.final_project.DAO.TicketConnection;
 import com.example.final_project.POCO.Customers;
 import com.example.final_project.POCO.Tickets;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class CustomerFacade extends AirlineFacade{
 
 

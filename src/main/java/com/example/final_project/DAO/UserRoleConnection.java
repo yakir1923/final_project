@@ -1,11 +1,13 @@
 package com.example.final_project.DAO;
 
 import com.example.final_project.POCO.UserRole;
+import org.springframework.stereotype.Component;
 
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class UserRoleConnection implements DAO<UserRole>{
     public  static List<UserRole> userRoleList=new ArrayList<>();
     PGAConnection myConnection;

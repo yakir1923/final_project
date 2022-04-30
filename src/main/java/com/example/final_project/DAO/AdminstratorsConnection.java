@@ -3,11 +3,14 @@ package com.example.final_project.DAO;
 
 
 import com.example.final_project.POCO.Adminstrator;
+import org.springframework.stereotype.Component;
 
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Component
 public class AdminstratorsConnection implements DAO<Adminstrator>{
     public PGAConnection myConnection;
     public static List<Adminstrator> list=new ArrayList<>();

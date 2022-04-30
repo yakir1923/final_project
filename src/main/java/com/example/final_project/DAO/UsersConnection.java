@@ -3,11 +3,13 @@ package com.example.final_project.DAO;
 
 
 import com.example.final_project.POCO.Users;
+import org.springframework.stereotype.Component;
 
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class UsersConnection implements DAO<Users>{
 
     PGAConnection myConnection;

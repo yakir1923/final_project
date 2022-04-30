@@ -6,9 +6,11 @@ import com.example.final_project.DAO.AirlineCompanyConnection;
 import com.example.final_project.DAO.FlightConnection;
 import com.example.final_project.POCO.AirlineCompanies;
 import com.example.final_project.POCO.Flights;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AirlineFacade extends AnonymousFacade{
 
     public List<Flights> get_my_flights (){

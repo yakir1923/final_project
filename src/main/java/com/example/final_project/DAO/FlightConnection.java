@@ -3,12 +3,14 @@ package com.example.final_project.DAO;
 
 
 import com.example.final_project.POCO.Flights;
+import org.springframework.stereotype.Component;
 
 import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class FlightConnection implements DAO<Flights>{
     public Flights flight;
     public PGAConnection myConnection;

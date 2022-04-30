@@ -6,9 +6,11 @@ import com.example.final_project.DAO.CustomerConnection;
 import com.example.final_project.POCO.Adminstrator;
 import com.example.final_project.POCO.AirlineCompanies;
 import com.example.final_project.POCO.Customers;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AdministratorFacade extends FacadeBase{
 
 

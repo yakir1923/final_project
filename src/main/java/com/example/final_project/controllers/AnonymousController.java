@@ -4,6 +4,7 @@ package com.example.final_project.controllers;
 import com.example.final_project.facade.AnonymousFacade;
 import com.example.final_project.facade.FacadeBase;
 import com.example.final_project.POCO.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.Entity;
@@ -13,7 +14,8 @@ import java.util.List;
 @RestController
 public class AnonymousController {
 
-     AnonymousFacade anonymousFacade=new AnonymousFacade();
+    @Autowired
+     AnonymousFacade anonymousFacade;
 
 
     @GetMapping("/")

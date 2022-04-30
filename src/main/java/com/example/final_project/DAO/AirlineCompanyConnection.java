@@ -2,11 +2,13 @@ package com.example.final_project.DAO;
 
 
 import com.example.final_project.POCO.AirlineCompanies;
+import org.springframework.stereotype.Component;
 
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class AirlineCompanyConnection implements DAO<AirlineCompanies>{
 
     PGAConnection myConnection;

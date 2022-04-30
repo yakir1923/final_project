@@ -5,7 +5,9 @@ import com.example.final_project.DAO.CustomerConnection;
 import com.example.final_project.DAO.UsersConnection;
 import com.example.final_project.POCO.Customers;
 import com.example.final_project.POCO.Users;
+import org.springframework.stereotype.Service;
 
+@Service
 public class AnonymousFacade extends FacadeBase{
     public FacadeBase facade;
     public Users user;

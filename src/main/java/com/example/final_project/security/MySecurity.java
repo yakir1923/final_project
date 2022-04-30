@@ -36,11 +36,11 @@ public class MySecurity extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests().
-                antMatchers("/admin/**").hasRole("Administrator")
+        http.authorizeHttpRequests()
+                .antMatchers("/admin/**").hasRole("Administrator")
                 .antMatchers("/airline/**").hasAnyRole("Administrator", "Airline_Companie")
                 .antMatchers("/customer/**").hasAnyRole("Administrator", "Customers")
-                .antMatchers("/").permitAll()
+                .antMatchers("/**/").permitAll()
                 .and().formLogin();
     }
 

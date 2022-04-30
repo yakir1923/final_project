@@ -8,10 +8,12 @@ import com.example.final_project.POCO.AirlineCompanies;
 import com.example.final_project.POCO.Countries;
 import com.example.final_project.POCO.Flights;
 import com.example.final_project.POCO.Users;
+import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
 import java.util.List;
 
+@Service
 public abstract class FacadeBase {
 
    protected LoginToken loginToken;

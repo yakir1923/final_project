@@ -2,11 +2,13 @@ package com.example.final_project.DAO;
 
 
 import com.example.final_project.POCO.Customers;
+import org.springframework.stereotype.Component;
 
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class CustomerConnection implements DAO<Customers>{
     public static List<Customers> customersList =new ArrayList<>();
     public PGAConnection myConnection;

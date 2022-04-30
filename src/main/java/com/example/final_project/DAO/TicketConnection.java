@@ -2,11 +2,13 @@ package com.example.final_project.DAO;
 
 
 import com.example.final_project.POCO.Tickets;
+import org.springframework.stereotype.Component;
 
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class TicketConnection implements DAO<Tickets>{
 
     public static List<Tickets> ticketsList=new ArrayList<>();
