@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 public class MySecurity extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    DataSource dataSource;
+   public DataSource dataSource;
 
 
     @Override
@@ -37,11 +37,14 @@ public class MySecurity extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests()
-                .antMatchers("/admin/**").hasRole("Administrator")
-                .antMatchers("/airline/**").hasAnyRole("Administrator", "Airline_Companie")
-                .antMatchers("/customer/**").hasAnyRole("Administrator", "Customers")
-                .antMatchers("/**/").permitAll()
+//                .antMatchers("/admin/**").hasRole("Administrator")
+//                .antMatchers("/airline/**").hasRole("Airline_Company")
+//                .antMatchers("/customer/**").hasRole("Customers")
+//                .antMatchers("/contactus/**").permitAll()
+//                .antMatchers("/anonymous/**").permitAll()
+                .antMatchers("/").permitAll()
                 .and().formLogin();
+        http.csrf().disable();
     }
 
 }

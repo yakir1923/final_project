@@ -16,6 +16,6 @@ public class AddLoggerService {
         addLoggerRepo.save(addLogger);
     }
     public int getLength(){
-        return addLoggerRepo.findAll().size();
+        return (addLoggerRepo.findAll().size()+1);
     }
 }

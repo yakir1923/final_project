@@ -10,7 +10,7 @@ import java.sql.Timestamp;
 import java.util.List;
 
 @RestController
-@RequestMapping("airline")
+@RequestMapping("/airline")
 public class AirlineController {
 
     @Autowired

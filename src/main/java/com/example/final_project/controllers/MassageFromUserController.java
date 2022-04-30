@@ -19,6 +19,7 @@ public class MassageFromUserController {
     public List<MassageFromUser> getAll(){
         return massegeFromUserService.getAllMassages();
     }
+
     @GetMapping("/massage/{id}")
     MassageFromUser getById(@PathVariable int id){
         var res=massegeFromUserService.getMassageFromUser(id);

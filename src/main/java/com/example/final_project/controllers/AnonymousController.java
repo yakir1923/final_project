@@ -1,22 +1,24 @@
 package com.example.final_project.controllers;
 
 
+import com.example.final_project.DTO.AddLogger;
 import com.example.final_project.facade.AnonymousFacade;
 import com.example.final_project.facade.FacadeBase;
 import com.example.final_project.POCO.*;
+import com.example.final_project.repository.AddLoggerRepo;
+import com.example.final_project.service.AddLoggerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.Entity;
 import java.sql.Timestamp;
 import java.util.List;
 
 @RestController
+@RequestMapping("/anonymous")
 public class AnonymousController {
 
     @Autowired
      AnonymousFacade anonymousFacade;
-
 
     @GetMapping("/")
     public List<Flights> get_all_flights(){
@@ -55,15 +57,18 @@ public class AnonymousController {
         return anonymousFacade.get_all_countries();
     }
 
-    @RequestMapping("get_country_by_id/{id}")
+    @RequestMapping("/get_country_by_id/{id}")
     public Countries get_country_by_id(@PathVariable int id){
         return anonymousFacade.get_country_by_id(id);
     }
 
     @PostMapping("/create_new_user")
-    public boolean create_new_user(@RequestBody Users user){
+    public boolean addNewUser(@RequestBody Users user){
+//        AddLogger addLogger=new AddLogger(1,"test");
+//        addLoggerRepo.save(addLogger);
         System.out.println(user);
-        anonymousFacade.create_new_user(user);
+        anonymousFacade.addNewUser(user);
+
         return true;
     }
 

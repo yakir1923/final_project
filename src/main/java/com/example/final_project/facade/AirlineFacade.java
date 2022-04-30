@@ -2,8 +2,8 @@ package com.example.final_project.facade;
 
 
 
-import com.example.final_project.DAO.AirlineCompanyConnection;
-import com.example.final_project.DAO.FlightConnection;
+import com.example.final_project.dao.AirlineCompanyConnection;
+import com.example.final_project.dao.FlightConnection;
 import com.example.final_project.POCO.AirlineCompanies;
 import com.example.final_project.POCO.Flights;
 import org.springframework.stereotype.Service;

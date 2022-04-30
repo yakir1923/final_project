@@ -2,8 +2,8 @@ package com.example.final_project.facade;
 
 
 
-import com.example.final_project.DAO.CustomerConnection;
-import com.example.final_project.DAO.TicketConnection;
+import com.example.final_project.dao.CustomerConnection;
+import com.example.final_project.dao.TicketConnection;
 import com.example.final_project.POCO.Customers;
 import com.example.final_project.POCO.Tickets;
 import org.springframework.stereotype.Service;

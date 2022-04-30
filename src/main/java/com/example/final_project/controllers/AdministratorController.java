@@ -10,7 +10,7 @@ import java.sql.Timestamp;
 import java.util.List;
 
 @RestController
-@RequestMapping("admin")
+@RequestMapping("/admin")
 public class AdministratorController {
 
 

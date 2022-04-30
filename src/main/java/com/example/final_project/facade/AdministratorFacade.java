@@ -1,8 +1,8 @@
 package com.example.final_project.facade;
 
-import com.example.final_project.DAO.AdminstratorsConnection;
-import com.example.final_project.DAO.AirlineCompanyConnection;
-import com.example.final_project.DAO.CustomerConnection;
+import com.example.final_project.dao.AdminstratorsConnection;
+import com.example.final_project.dao.AirlineCompanyConnection;
+import com.example.final_project.dao.CustomerConnection;
 import com.example.final_project.POCO.Adminstrator;
 import com.example.final_project.POCO.AirlineCompanies;
 import com.example.final_project.POCO.Customers;

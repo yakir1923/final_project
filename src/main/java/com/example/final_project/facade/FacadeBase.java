@@ -1,9 +1,9 @@
 package com.example.final_project.facade;
 
-import com.example.final_project.DAO.AirlineCompanyConnection;
-import com.example.final_project.DAO.CountryConnection;
-import com.example.final_project.DAO.FlightConnection;
-import com.example.final_project.DAO.UsersConnection;
+import com.example.final_project.dao.AirlineCompanyConnection;
+import com.example.final_project.dao.CountryConnection;
+import com.example.final_project.dao.FlightConnection;
+import com.example.final_project.dao.UsersConnection;
 import com.example.final_project.POCO.AirlineCompanies;
 import com.example.final_project.POCO.Countries;
 import com.example.final_project.POCO.Flights;
@@ -59,7 +59,7 @@ public abstract class FacadeBase {
         return connection.get(id);
    }
 
-   public void create_new_user (Users user){
+   public void addNewUser(Users user){
        UsersConnection usersConnection=new UsersConnection();
        usersConnection.add(user);
    }

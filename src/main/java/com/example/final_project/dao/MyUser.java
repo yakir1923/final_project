@@ -1,4 +1,4 @@
-package com.example.final_project.DAO;
+package com.example.final_project.dao;
 
 public class MyUser {
     private String url;

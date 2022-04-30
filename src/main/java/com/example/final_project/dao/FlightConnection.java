@@ -1,4 +1,4 @@
-package com.example.final_project.DAO;
+package com.example.final_project.dao;
 
 
 
@@ -21,6 +21,7 @@ public class FlightConnection implements DAO<Flights>{
     @Override
     public Flights get(int id) {
         try {
+            System.out.println(id);
             myConnection= PGAConnection.getInstance();
             Statement stm=myConnection.connection.createStatement();
             var r=stm.executeQuery("SELECT * FROM \"Flights\" WHERE \"Id\" = "+id+"");
@@ -33,6 +34,7 @@ public class FlightConnection implements DAO<Flights>{
             flight.departureTime=r.getTimestamp("Departure_Time");
             flight.landingTime=r.getTimestamp("Landing_Time");
             flight.remainingTickets=r.getInt("Remaining_Tickets");
+            System.out.println(flight);
             return flight;
         }catch (Exception e){
             System.out.println("Error from FlightConnection "+e.getMessage());

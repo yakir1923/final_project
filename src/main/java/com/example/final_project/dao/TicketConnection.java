@@ -1,4 +1,4 @@
-package com.example.final_project.DAO;
+package com.example.final_project.dao;
 
 
 import com.example.final_project.POCO.Tickets;
